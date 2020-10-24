@@ -98,18 +98,18 @@ EOD;
         <form class="Form" method="post">
         <h1><?php> Summary Of Details  </h1>
         Your Name: <p> $SummaryofData->Fname</p> 
-        LastName <p>$LName1</p>
-        Your DOB: <p>$DOB1</p>
-        Time: <p>$Time1</p>
-        Type of Insurance: <p>$TInsurance1</p>
-        House Number: <p>$HouseNo1</p>
-        PostCode: <p>$PostCode1</p>
-        Mobile Number: <p>$MobileNo1</p>
-        LandLine Number <p>$LandLine1</p>
-        Gender: <p>$Gender1</p>
-        Random Number 1: <p>$RandomNo1</p>
-        Random Number 2: <p>$RandomNo2</p>
-        Random Number 3: <p>$RandomNo3</p>
+        LastName <p>$$SummaryofData->LName1</p>
+        Your DOB: <p>$$SummaryofData->DOB1</p>
+        Time: <p>$$SummaryofData->Time1</p>
+        Type of Insurance: <p>$$SummaryofData->TInsurance1</p>
+        House Number: <p>$$SummaryofData->HouseNo1</p>
+        PostCode: <p>$$SummaryofData->PostCode1</p>
+        Mobile Number: <p>$$SummaryofData->MobileNo1</p>
+        LandLine Number <p>$$SummaryofData->LandLine1</p>
+        Gender: <p>$$SummaryofData->Gender1</p>
+        Random Number 1: <p>$$SummaryofData->RandomNo1</p>
+        Random Number 2: <p>$$SummaryofData->RandomNo2</p>
+        Random Number 3: <p>$$SummaryofData->RandomNo3</p>
 
         
         
