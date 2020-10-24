@@ -1,10 +1,11 @@
-<?php
+<?php 
 
-class rendering
+
+class Rendering
 {
-    private $pageId;
+    public $pageId;
 
-    public function __construct($num = 2)
+    public function __construct($num = 0)
     {
         $this->pageId = $num;
     }
@@ -72,9 +73,6 @@ EOD;
         $contents = <<<EOD
         <form class="Form" method="post">
         <input name="MobileNumber" placeholder="Mobile Number">
-    <?php if(isset($FnameError)) { ?>
-        <p><?php echo $FnameError)) ?> </p>
-        <?php } ?>
         <input name="LandLine" placeholder="Land Line">
         <section class="GenderAssign">
       Gender  Male:<input type="checkbox" name="Gender[] value="Male"">
@@ -92,14 +90,14 @@ EOD;
         return $contents;
     }
 
-    public function section4()
-
-
+    public function section4($SummaryofData)
+        
     {
+     var_dump($SummaryofData);
         $contents = <<<EOD
         <form class="Form" method="post">
         <h1><?php> Summary Of Details  </h1>
-        Your Name: <p> $FName1</p> 
+        Your Name: <p> $SummaryofData->Fname</p> 
         LastName <p>$LName1</p>
         Your DOB: <p>$DOB1</p>
         Time: <p>$Time1</p>
@@ -117,17 +115,17 @@ EOD;
         
         </form>
 EOD;
-
+    
 
         return $contents;
      
     }
 
 
-    public function render() 
+    public function render($SummaryofData) 
     {
         switch ($this->getPageId()) {
-        case 2:
+        default:
             return $this->section1();
     
 
@@ -137,7 +135,7 @@ EOD;
         case 8:
                 return $this->section3();
         case 10:
-            return $this->section4();
+            return $this->section4($SummaryofData);
     
         }   
     }
