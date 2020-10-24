@@ -42,8 +42,6 @@ class FormData
 } 
 
 
-// }
 
-// $this->Fname = $Fname;
 
 ?>
